@@ -1,3 +1,14 @@
-<p>
-  marvel-heros works!
-</p>
+<div class="row">
+  <div class="col-4 offset-4">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let hero of heros" [ngClass]="{'text-success': hero==='Hulk'}">{{ hero | lowercase }}</li>
+      <li class="list-group-item">
+        <button class="btn btn-info" (click)="AddMore()">Add More</button>
+      </li>
+      <li class="list-group-item" *ngIf="Adding">
+          <input type="text" class="form-control" [(ngModel)]="inputHero"><br>
+          <button class="btn btn-success" [disabled]="!inputHero" (click)="AddHero()">Add hero</button>
+      </li>
+    </ul>
+  </div>
+</div>

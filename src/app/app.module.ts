@@ -9,7 +9,7 @@ import { DcComicsComponent } from './dc-comics/dc-comics.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routeList : Routes = [
-  {path : "", component: DcComicsComponent}
+  {path : "", component: DcComicsComponent},
   {path : "marvel", component: MarvelHerosComponent}
 ]
 
